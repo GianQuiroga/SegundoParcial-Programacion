@@ -991,6 +991,19 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "AccesoDatosParcial/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": "10.0.12"
+        },
+        "compile": {
+          "bin/placeholder/AccesoDatosParcial.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccesoDatosParcial.dll": {}
+        }
       }
     }
   },
@@ -2937,10 +2950,16 @@
         "system.composition.typedparts.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "AccesoDatosParcial/1.0.0": {
+      "type": "project",
+      "path": "../AccesoDatosParcial/AccesoDatosParcial.csproj",
+      "msbuildProject": "../AccesoDatosParcial/AccesoDatosParcial.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AccesoDatosParcial >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.12",
       "Microsoft.EntityFrameworkCore.Sqlite >= 10.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.12"
@@ -2978,7 +2997,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\AccesoDatosParcial.csproj": {
+              "projectPath": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\AccesoDatosParcial.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

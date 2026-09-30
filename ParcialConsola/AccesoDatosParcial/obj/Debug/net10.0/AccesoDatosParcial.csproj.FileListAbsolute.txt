@@ -1,0 +1,13 @@
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.csproj.AssemblyReference.cache
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.AssemblyInfoInputs.cache
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.AssemblyInfo.cs
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.csproj.CoreCompileInputs.cache
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\bin\Debug\net10.0\AccesoDatosParcial.deps.json
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\bin\Debug\net10.0\AccesoDatosParcial.dll
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\bin\Debug\net10.0\AccesoDatosParcial.pdb
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.dll
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\refint\AccesoDatosParcial.dll
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDatosParcial.pdb
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\ref\AccesoDatosParcial.dll
+C:\Users\GianLuca\source\repos\ParcialConsola\AccesoDatosParcial\obj\Debug\net10.0\AccesoDa.05BA0820.Up2Date

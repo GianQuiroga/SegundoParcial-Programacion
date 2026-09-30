@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1578627F-D5DD-4F88-9501-9E8DFD8B3E5D}|ParcialConsola\\ParcialConsola.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\parcialconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1578627F-D5DD-4F88-9501-9E8DFD8B3E5D}|ParcialConsola\\ParcialConsola.csproj|solutionrelative:parcialconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83A4121E-814D-81F0-B8CD-0743DFAD1661}|ParcialConsola\\ParcialConsola.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\parcialconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83A4121E-814D-81F0-B8CD-0743DFAD1661}|ParcialConsola\\ParcialConsola.csproj|solutionrelative:parcialconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\accesodatosparcial\\data\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|solutionrelative:accesodatosparcial\\data\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\accesodatosparcial\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|solutionrelative:accesodatosparcial\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\accesodatosparcial\\models\\cancion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|solutionrelative:accesodatosparcial\\models\\cancion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\accesodatosparcial\\models\\artista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|solutionrelative:accesodatosparcial\\models\\artista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\accesodatosparcial\\repositories\\cancionesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|solutionrelative:accesodatosparcial\\repositories\\cancionesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|c:\\users\\gianluca\\source\\repos\\parcialconsola\\accesodatosparcial\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD5F01C-FC7C-E537-C988-50CC6A1F3F92}|AccesoDatosParcial\\AccesoDatosParcial.csproj|solutionrelative:accesodatosparcial\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,28 +38,103 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\ParcialConsola\\Program.cs",
               "RelativeDocumentMoniker": "ParcialConsola\\Program.cs",
-              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\ParcialConsola\\Program.cs",
-              "RelativeToolTip": "ParcialConsola\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\ParcialConsola\\Program.cs*",
+              "RelativeToolTip": "ParcialConsola\\Program.cs*",
+              "ViewState": "AgIAAIMAAAAAAAAAAAApwIAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-29T20:15:28.3Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cancion.cs",
+              "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Models\\Cancion.cs",
+              "RelativeDocumentMoniker": "AccesoDatosParcial\\Models\\Cancion.cs",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Models\\Cancion.cs",
+              "RelativeToolTip": "AccesoDatosParcial\\Models\\Cancion.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T22:14:36.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "AccesoDatosParcial\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "AccesoDatosParcial\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T20:22:55.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Artista.cs",
+              "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Models\\Artista.cs",
+              "RelativeDocumentMoniker": "AccesoDatosParcial\\Models\\Artista.cs",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Models\\Artista.cs",
+              "RelativeToolTip": "AccesoDatosParcial\\Models\\Artista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T20:22:09.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Data\\AplicationDbContext.cs",
+              "RelativeDocumentMoniker": "AccesoDatosParcial\\Data\\AplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Data\\AplicationDbContext.cs",
+              "RelativeToolTip": "AccesoDatosParcial\\Data\\AplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T20:21:12.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CancionesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Repositories\\CancionesRepository.cs",
+              "RelativeDocumentMoniker": "AccesoDatosParcial\\Repositories\\CancionesRepository.cs",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Repositories\\CancionesRepository.cs",
+              "RelativeToolTip": "AccesoDatosParcial\\Repositories\\CancionesRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T20:35:45.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "AccesoDatosParcial\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\GianLuca\\source\\repos\\ParcialConsola\\AccesoDatosParcial\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "AccesoDatosParcial\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T20:23:30.651Z",
+              "EditorCaption": ""
             }
           ]
         }

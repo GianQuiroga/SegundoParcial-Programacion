@@ -1,38 +1,22 @@
-﻿using AccesoDatos.Models;
-using AccesoDatos.Repositories;
+﻿using AccesoDatosParcial.Models;
+using AccesoDatosParcial.Repositories;
+using System;
+using Microsoft.EntityFrameworkCore;
 
-IGenericRepository<Autor> autorRepository = new GenericRepository<Autor>();
-IGenericRepository<Categoria> categoriaRepository = new GenericRepository<Categoria>();
-LibroRepository libroRepository = new LibroRepository();
+IGenericRepository<Artista> artistaRepository = new GenericRepository<Artista>();
+CancionesRepository cancionesRepository = new CancionesRepository();
 
 bool continuar = true;
 
 while (continuar)
 {
-    Console.WriteLine("1. Alta Autor");
-    Console.WriteLine("2. Alta Categoría");
-    Console.WriteLine("3. Alta Libro");
-    Console.WriteLine();
-
-    Console.WriteLine("4. Ver Autores");
-    Console.WriteLine("5. Ver Categorías");
-    Console.WriteLine("6. Ver Libros");
-    Console.WriteLine();
-
-    Console.WriteLine("7. Modificar Libro");
-    Console.WriteLine("8. Eliminar Libro");
-    Console.WriteLine("9. Modificar Autor");
-    Console.WriteLine();
-
-    // Opciones LINQ - entregable 3.
-    Console.WriteLine("10. Ver libros más recientes");
-    Console.WriteLine("11. Cantidad total de libros");
-    Console.WriteLine("12. Cantidad de libros activos");
-    Console.WriteLine("13. Buscar libro por ID");
-    Console.WriteLine("14. Ver libros ordenados por título");
-    Console.WriteLine("15. Verificar si existen libros activos");
-    Console.WriteLine();
-
+    Console.WriteLine("1. Alta Artista");
+    Console.WriteLine("2. Alta Canción");
+    Console.WriteLine("3. Ver Canciones");
+    Console.WriteLine("4. Mostrar canciones mas largas");
+    Console.WriteLine("5. Mostrar total cantidad de canciones");
+    Console.WriteLine("6. Mostrar canciones ordenadas alfabeticamente por titulo");
+    Console.WriteLine("7. Verificar si existen canciones registradas");
     Console.WriteLine("0. Salir");
     Console.WriteLine();
 
@@ -44,65 +28,32 @@ while (continuar)
     switch (opcion)
     {
         case "1":
-            AltaAutor();
+            AltaArtista();
             break;
 
         case "2":
-            AltaCategoria();
+            AltaCancion();
             break;
 
         case "3":
-            AltaLibro();
+            VerCanciones();
             break;
 
         case "4":
-            MostrarAutores();
+            MostrarCancionesMasLargas();
             break;
 
         case "5":
-            MostrarCategorias();
+            MostrarCantidadCanciones();
             break;
 
         case "6":
-            MostrarLibros();
+            MostrarCancionesOrdenadasPorTitulo();
             break;
 
         case "7":
-            ModificarLibro();
+            VerificarCancionesRegistradas();
             break;
-
-        case "8":
-            EliminarLibro();
-            break;
-
-        case "9":
-            ModificarAutor();
-            break;
-
-        case "10":
-            MostrarLibrosMasRecientes();
-            break;
-
-        case "11":
-            MostrarCantidadLibros();
-            break;
-
-        case "12":
-            MostrarCantidadLibrosActivos();
-            break;
-
-        case "13":
-            BuscarLibroPorId();
-            break;
-
-        case "14":
-            MostrarLibrosOrdenadosPorTitulo();
-            break;
-
-        case "15":
-            VerificarLibrosActivos();
-            break;
-
         case "0":
             continuar = false;
             Console.WriteLine("Aplicación finalizada.");
@@ -115,249 +66,121 @@ while (continuar)
     }
 }
 
-void AltaAutor()
+void AltaArtista()
 {
-    Console.Write("Nombre del autor: ");
+    Console.Write("Nombre del artista: ");
 
-    Autor autor = new Autor
+    Artista artista = new Artista
     {
-        Nombre = Console.ReadLine()
+        Name = Console.ReadLine()
     };
 
-    autorRepository.Agregar(autor);
+    artistaRepository.Agregar(artista);
 
-    Console.WriteLine("Autor registrado correctamente.");
+    Console.WriteLine("Artista registrado correctamente.");
 
     PresioneParaContinuar();
 }
-
-void MostrarAutores()
+void AltaCancion()
 {
-    Console.WriteLine("===== AUTORES =====");
+    Console.Write("Título: ");
+    string titulo = Console.ReadLine();
 
-    var autores = autorRepository.ObtenerTodos();
+    Console.Write("Duración (en segundos): ");
+    int duracion = 0;
+    if (!int.TryParse(Console.ReadLine(), out duracion))
+    {
+        Console.WriteLine("Duración inválida. Debe ser un número entero.");
+        return;
+    }
+    Console.WriteLine("Artistas disponibles:");
 
-    foreach (var autor in autores)
+    foreach (var Artista in artistaRepository.ObtenerTodos())
     {
         Console.WriteLine(
-            $"ID: {autor.Id} | Nombre: {autor.Nombre}");
+            $"ID: {Artista.Id} - {Artista.Name}");
     }
+
+    Console.Write("Seleccione el ID del autor: ");
+    int autorId = 0;
+    if (!int.TryParse(Console.ReadLine(), out autorId))
+    {
+        Console.WriteLine("ID de autor inválido. Debe ser un número entero.");
+        return;
+    }
+
+    Cancion cancion = new Cancion
+    {
+        Titulo = titulo,
+        DuracionEnSeg = duracion,
+        ArtistaId = autorId,
+    };
+
+    cancionesRepository.Agregar(cancion);
+
+    Console.WriteLine("Canción registrada correctamente.");
 
     PresioneParaContinuar();
 }
-
-void MostrarCategorias()
+void VerCanciones()
 {
-    Console.WriteLine("===== CATEGORÍAS =====");
+    Console.WriteLine("===== CANCIONES =====");
 
-    var categorias = categoriaRepository.ObtenerTodos();
+    var canciones = cancionesRepository.ObtenerTodos();
 
-    foreach (var categoria in categorias)
+    foreach (var cancion in canciones)
     {
         Console.WriteLine(
-            $"ID: {categoria.Id} | Nombre: {categoria.Nombre}");
+            $"ID: {cancion.Id} | Nombre: {cancion.Titulo} | Duración: {cancion.DuracionEnSeg}");
     }
 
     PresioneParaContinuar();
 }
-
-void MostrarLibros()
+void MostrarCancionesMasLargas()
 {
-    Console.WriteLine("===== LISTADO DE LIBROS =====");
-
-    var libros = libroRepository.ObtenerTodosCon("Autor");
-
-    if (!libros.Any())
-    {
-        Console.WriteLine("No existen libros registrados.");
-    }
-    else
-    {
-        foreach (var libro in libros.Where(l => l.Activo))
-        {
-            Console.WriteLine(
-                $"ID: {libro.Id} | " +
-                $"Título: {libro.Titulo} | " +
-                $"Año: {libro.AnioPublicacion} | " +
-                $"Autor: {libro.Autor.Nombre}");
-        }
-    }
-
-    Console.WriteLine("=============================");
-
-    PresioneParaContinuar();
-}
-
-void ModificarAutor()
-{
-    MostrarAutores();
-
-    Console.Write("Ingrese el ID del autor: ");
-    int id = int.Parse(Console.ReadLine());
-
-    var autor = autorRepository.ObtenerPorId(id);
-
-    if (autor != null)
-    {
-        Console.Write("Nuevo nombre: ");
-        autor.Nombre = Console.ReadLine();
-
-        autorRepository.Modificar(autor);
-
-        Console.WriteLine("Autor modificado correctamente.");
-    }
-    else
-    {
-        Console.WriteLine("Autor no encontrado.");
-    }
-
-    PresioneParaContinuar();
-}
-
-void ModificarLibro()
-{
-    MostrarLibros();
-
-    Console.Write("Ingrese el ID del libro: ");
-    int id = int.Parse(Console.ReadLine());
-
-    var libro = libroRepository.ObtenerPorId(id);
-
-    if (libro != null)
-    {
-        Console.Write("Nuevo título: ");
-        libro.Titulo = Console.ReadLine();
-
-        libroRepository.Modificar(libro);
-
-        Console.WriteLine("Libro modificado correctamente.");
-    }
-    else
-    {
-        Console.WriteLine("Libro no encontrado.");
-    }
-
-    PresioneParaContinuar();
-}
-
-void EliminarLibro()
-{
-    MostrarLibros();
-
-    Console.Write("Ingrese el ID del libro: ");
-    string idLibroABorrar = Console.ReadLine();
-
-    if (idLibroABorrar == null || idLibroABorrar == "")
-    {
-        Console.WriteLine("No fue ingresado ningun ID de libro");
-        PresioneParaContinuar();
-    }
-    else
-    {
-        int id = int.Parse(idLibroABorrar);
-
-        var libro = libroRepository.ObtenerPorId(id);
-
-        if (libro != null)
-        {
-            libro.Activo = false;
-
-            libroRepository.Modificar(libro);
-
-            Console.WriteLine("Libro eliminado lógicamente.");
-        }
-        else
-        {
-            Console.WriteLine("Libro no encontrado.");
-        }
-    }
-
-    PresioneParaContinuar();
-}
-
-void MostrarLibrosMasRecientes()
-{
-    Console.WriteLine("===== LIBROS MÁS RECIENTES =====");
-
-    foreach (var libro in libroRepository.ObtenerLibrosPorMasRecientes())
+    Console.WriteLine("===== CANCIONES MÁS LARGAS =====");
+    var cancionesMasLargas = cancionesRepository.ObtenerCancionesMasLargas();
+    foreach (var cancion in cancionesMasLargas)
     {
         Console.WriteLine(
-            $"{libro.Titulo} - {libro.AnioPublicacion}");
+            $"ID: {cancion.Id} | Nombre: {cancion.Titulo} | Duración: {cancion.DuracionEnSeg}");
     }
-
     PresioneParaContinuar();
 }
-
-void MostrarCantidadLibros()
+void MostrarCantidadCanciones()
 {
-    Console.WriteLine("===== CANTIDAD TOTAL DE LIBROS =====");
+    Console.WriteLine("===== CANTIDAD TOTAL DE CANCIONES =====");
 
     Console.WriteLine(
-        $"Cantidad: {libroRepository.ObtenerCantidadLibros()}");
+        $"Cantidad: {cancionesRepository.ContarCanciones()}");
 
     PresioneParaContinuar();
 }
-
-void MostrarCantidadLibrosActivos()
+void MostrarCancionesOrdenadasPorTitulo()
 {
-    Console.WriteLine("===== CANTIDAD DE LIBROS ACTIVOS =====");
-
-    Console.WriteLine(
-        $"Cantidad: {libroRepository.ObtenerCantidadLibrosActivos()}");
-
-    PresioneParaContinuar();
-}
-
-void BuscarLibroPorId()
-{
-    Console.Write("Ingrese ID del libro: ");
-
-    int id = int.Parse(Console.ReadLine());
-
-    var libro = libroRepository.ObtenerLibroPorId(id);
-
-    if (libro == null)
+    Console.WriteLine("===== CANCIONES ORDENADAS ALFABÉTICAMENTE POR TÍTULO =====");
+    var cancionesOrdenadas = cancionesRepository.OrdenarAlfabeticamente();
+    foreach (var cancion in cancionesOrdenadas)
     {
-        Console.WriteLine("Libro no encontrado.");
+        Console.WriteLine(
+            $"ID: {cancion.Id} | Nombre: {cancion.Titulo} | Duración: {cancion.DuracionEnSeg}");
+    }
+    PresioneParaContinuar();
+}
+void VerificarCancionesRegistradas()
+{
+    Console.WriteLine("===== VERIFICAR EXISTENCIA DE CANCIONES =====");
+    bool existenCanciones = cancionesRepository.ExisteCancion();
+    if (existenCanciones)
+    {
+        Console.WriteLine("Existen canciones registradas.");
     }
     else
     {
-        Console.WriteLine(
-            $"Título: {libro.Titulo} | Año: {libro.AnioPublicacion}");
+        Console.WriteLine("No existen canciones registradas.");
     }
-
     PresioneParaContinuar();
 }
-
-void MostrarLibrosOrdenadosPorTitulo()
-{
-    Console.WriteLine("===== LIBROS ORDENADOS POR TÍTULO =====");
-
-    foreach (var libro in libroRepository.ObtenerLibrosOrdenadosPorTitulo())
-    {
-        Console.WriteLine(
-            $"{libro.Titulo} - {libro.AnioPublicacion}");
-    }
-
-    PresioneParaContinuar();
-}
-
-void VerificarLibrosActivos()
-{
-    Console.WriteLine("===== VERIFICAR LIBROS ACTIVOS =====");
-
-    if (libroRepository.ExistenLibrosActivos())
-    {
-        Console.WriteLine("Existen libros activos.");
-    }
-    else
-    {
-        Console.WriteLine("No existen libros activos.");
-    }
-
-    PresioneParaContinuar();
-}
-
 void PresioneParaContinuar()
 {
     Console.WriteLine();
