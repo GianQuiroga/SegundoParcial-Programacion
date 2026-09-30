@@ -126,12 +126,12 @@ void VerCanciones()
 {
     Console.WriteLine("===== CANCIONES =====");
 
-    var canciones = cancionesRepository.ObtenerTodos();
+    var canciones = cancionesRepository.ObtenerTodosCon("Artista");
 
     foreach (var cancion in canciones)
     {
         Console.WriteLine(
-            $"ID: {cancion.Id} | Nombre: {cancion.Titulo} | Duración: {cancion.DuracionEnSeg}");
+            $"ID: {cancion.Id} | Nombre: {cancion.Titulo} | Duración: {cancion.DuracionEnSeg} | Artista: {cancion.Artista.Name}");
     }
 
     PresioneParaContinuar();
