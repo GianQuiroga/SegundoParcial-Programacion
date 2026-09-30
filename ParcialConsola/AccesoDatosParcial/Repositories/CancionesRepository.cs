@@ -13,12 +13,10 @@ namespace AccesoDatosParcial.Repositories
                 .OrderByDescending(c => c.DuracionEnSeg)
                 .ToList();
         }
-
         public int ContarCanciones()
         {
             return _context.Canciones.Count();
         }
-        
         public List<Cancion> OrdenarAlfabeticamente()
         {
             return _context.Canciones

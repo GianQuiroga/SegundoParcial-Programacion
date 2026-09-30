@@ -101,11 +101,11 @@ void AltaCancion()
             $"ID: {Artista.Id} - {Artista.Name}");
     }
 
-    Console.Write("Seleccione el ID del autor: ");
-    int autorId = 0;
-    if (!int.TryParse(Console.ReadLine(), out autorId))
+    Console.Write("Seleccione el ID del artista: ");
+    int artistaId = 0;
+    if (!int.TryParse(Console.ReadLine(), out artistaId))
     {
-        Console.WriteLine("ID de autor inválido. Debe ser un número entero.");
+        Console.WriteLine("ID de artista inválido. Debe ser un número entero.");
         return;
     }
 
@@ -113,7 +113,7 @@ void AltaCancion()
     {
         Titulo = titulo,
         DuracionEnSeg = duracion,
-        ArtistaId = autorId,
+        ArtistaId = artistaId,
     };
 
     cancionesRepository.Agregar(cancion);
